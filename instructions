@@ -1,0 +1,14 @@
+1.            Build a small phone book app that will allow you to create and delete people.
+
+2.            The front end should be a simple page with an interface to create a new person. 
+The interface should have three fields, first name, last name, and phone number plus a submit button. 
+There must also be a list of people. 
+The list should be ordered by last name in ascending order, it should also contain a delete button that removes the user. 
+The delete button should be on the right side of the list, and the list should alternate background colors depending on odd/even.
+
+3.            JavaScript should handle basic form validation and all saves/deletes should be done via AJAX.
+
+4.            PHP should handle retrieving all people, adding and removing people from a database.
+
+5.            Database can be your preference. 
+
