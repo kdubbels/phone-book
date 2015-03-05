@@ -6,7 +6,7 @@
 -- $dbname = "phone_book";
 
 --
--- Table structure for table `admins`
+-- Table structure for table `people`
 --
 
 DROP TABLE IF EXISTS `people`;
@@ -19,11 +19,10 @@ CREATE TABLE `people` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `admins`
+-- Table data for table `people`
 --
 
-INSERT INTO `people` VALUES (1,'bruce','wayne','555-555-5555'),(2,'clark','kent','555-555-5555'),(3,'diana','price''555-555-5555');
+INSERT INTO `people` VALUES (1,'bruce','wayne','555-555-5555'),(2,'clark','kent','555-555-5555'),(3,'diana','price','555-555-5555');
 
 --
--- Table structure for table `tickets`
---
+

@@ -1,16 +1,5 @@
-<?php 
-	if (!isset($layout_context)) {
-		$layout_context = "public";
-	}
-?>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Phone Book</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
+<html>
+<head>
 <script>
 function ajax_post(){
     // Create our XMLHttpRequest object
@@ -37,6 +26,10 @@ function ajax_post(){
 </script>
 </head>
 <body>
-
-    <div class="container-fluid">
-	<h1>Phone Book</h1>
+<h2>Ajax Post to PHP and Get Return Data</h2>
+First Name: <input id="first_name" name="first_name" type="text">  <br><br>
+Last Name: <input id="last_name" name="last_name" type="text"> <br><br>
+<input name="myBtn" type="submit" value="Submit Data" onclick="ajax_post();"> <br><br>
+<div id="status"></div>
+</body>
+</html>
