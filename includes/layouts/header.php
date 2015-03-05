@@ -11,6 +11,8 @@
     <title>Phone Book</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.js"></script>
 <script>
 function ajax_post(){
     // Create our XMLHttpRequest object
@@ -34,6 +36,13 @@ function ajax_post(){
     hr.send(vars); // Actually execute the request
     document.getElementById("status").innerHTML = "processing...";
 }
+</script>
+<script>
+$(document).ready(function() 
+    { 
+        $("#tablelist").tablesorter(); 
+    } 
+); 
 </script>
 </head>
 <body>

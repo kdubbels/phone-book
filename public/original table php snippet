@@ -1,0 +1,11 @@
+        <tr>
+            <td><?php echo $subject["last_name"]; ?>
+            </td>
+            <td><?php echo $subject["first_name"]; ?>
+            </td>
+            <td><?php echo $subject["phone"]; ?>
+            </td>
+            <?php
+            }
+        ?>
+        </tr>

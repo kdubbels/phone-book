@@ -34,7 +34,7 @@
         ?>
     -->
     <div class="table-responsive">
-    <table class="table table-striped table-hover">
+    <table id="tablelist" class="table table-striped table-hover tablesorter">
         <thead>
         <tr>
             <th>ID
@@ -49,7 +49,7 @@
         </thead>
         <tbody>
             <?php
-        while($subject = mysqli_fetch_row($result)) {
+        while($subject = mysqli_fetch_assoc($result)) {
             echo '<tr>';
             foreach($subject as $key=>$value) {
                 echo '<td>',$value,'</td>';
@@ -64,7 +64,7 @@
 
 
 </div> <!-- Boot page container -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
 <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
