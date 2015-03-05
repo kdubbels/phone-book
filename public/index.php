@@ -27,15 +27,18 @@
 
 
 <div id="listing">
-            <?php
+   <!--         <?php
             // Use returned data
-            while($subject = mysqli_fetch_assoc($result)) {
+           // while($subject = mysqli_fetch_assoc($result)) {
                 // output data from each row
         ?>
+    -->
     <div class="table-responsive">
     <table class="table table-striped table-hover">
         <thead>
         <tr>
+            <th>ID
+            </th>
             <th>Last Name
             </th>
             <th>First Name
@@ -45,17 +48,15 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td><?php echo $subject["last_name"]; ?>
-            </td>
-            <td><?php echo $subject["first_name"]; ?>
-            </td>
-            <td><?php echo $subject["phone"]; ?>
-            </td>
             <?php
+        while($subject = mysqli_fetch_row($result)) {
+            echo '<tr>';
+            foreach($subject as $key=>$value) {
+                echo '<td>',$value,'</td>';
             }
+            echo '</tr>';
+        }
         ?>
-        </tr>
         </tbody>
     </table>
     </div><!-- Boot table -->
