@@ -2,7 +2,7 @@
 <?php require_once("../includes/db_connection.php"); ?>
 <?php include("../includes/layouts/header.php"); ?>
 <?php
-    // 2. Perform database query
+    // Perform database query
     $query  = "SELECT * ";
     $query .= "FROM people ";
     $query .= "ORDER BY last_name ASC";
@@ -17,9 +17,9 @@
 
 
 <div id="update">
-<p>First Name: <input id="first_name" name="first_name" type="text"></p>
-<p>Last Name: <input id="last_name" name="last_name" type="text"></p>
-<p>Phone Number <input id="phone" name="phone" type="text"></p>
+<p>First Name: <input id="first_name" name="first_name" type="text" required /></p>
+<p>Last Name: <input id="last_name" name="last_name" type="text" required /></p>
+<p>Phone Number: <input id="phone" name="phone" type="text"></p>
 <input name="myBtn" type="submit" value="Submit Data" onclick="ajax_post();"> <br><br>
 </div>
 
@@ -37,8 +37,8 @@
     <table id="tablelist" class="table table-striped table-hover tablesorter">
         <thead>
         <tr>
-            <th>ID
-            </th>
+       <!-- <th>ID
+            </th>   -->
             <th>Last Name
             </th>
             <th>First Name
@@ -50,13 +50,21 @@
         <tbody>
             <?php
         while($subject = mysqli_fetch_assoc($result)) {
-            echo '<tr>';
-            foreach($subject as $key=>$value) {
-                echo '<td>',$value,'</td>';
-            }
-            echo '</tr>';
+echo "<tr>";
+                echo "<td>" , $subject["last_name"] , "</td>";
+                echo "<td>" , $subject["first_name"] , "</td>";
+                echo "<td>" , $subject["phone"] , "</td>";
+                echo "<td style='text-align:center;'>";
+  
+                    //we will use this links on next part of this post
+                    echo "<div class='editBtn customBtn'><button class='btn btn-default' type='submit'>Edit</button></div>";
+  
+                    //we will use this links on next part of this post
+                    echo "<div class='deleteBtn customBtn'><button class='btn btn-default' type='submit'><a href='#' onclick='return confirm('Are you sure?');'>Delete</a></button></div>";
+                echo "</td>";
+            echo "</tr>";
         }
-        ?>
+            ?>
         </tbody>
     </table>
     </div><!-- Boot table -->
