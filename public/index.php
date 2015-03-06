@@ -130,12 +130,7 @@ echo "<tr>";
             echo "</tr>";
         }
             ?>
-            <tr>
-                <td>Queen</td>
-                <td>Oliver</td>
-                <td>777-888-9999</td>
-                <td style='text-align:center;'><div class='deleteBtn customBtn'><button class='btn btn-default' type='submit'>Delete</button></div></td>
-            </tr>
+            
         </tbody>
     </table>
     </div><!-- Boot table -->
