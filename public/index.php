@@ -18,6 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Phone Book</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script type="text/javascript" src="js/jquery.tablesorter.js"></script>
@@ -64,32 +65,40 @@ $(document).ready(function()
 <style>
 body{
     font-family:futura-pt;
+    background-image: url(css/bg.jpg);
 }
 </style>
 </head>
 <body>
 
-    <div class="container-fluid">
-    <h1>Phone Book</h1>
+    <div class="container">
 
+    <h1>My Sweet Phone Book App</h1>
 
+<div class="row">
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
 
 <form id="myForm">
-<p>First Name: <input id="first_name" name="first_name" type="text" required /></p>
-<p>Last Name: <input id="last_name" name="last_name" type="text" required /></p>
-<p>Phone Number: <input id="phone" name="phone" type="text" required></p>
+    <div class="form-group">
+<label for="first">First Name: </label><input id="first_name" class="form-control" name="first_name" type="text" placeholder="First Name" autofocus required /></p>
+    </div>
+    <div class="form-group">
+<label for="last">Last Name: </label><input id="last_name" class="form-control" name="last_name" type="text" placeholder="Last Name" required /></p>
+    </div>
+    <div class="form-group">
+<label for="num">Phone: </label><input id="phone" class="form-control" name="phone" type="text" placeholder="Phone" required pattern="[2-9][0-9]{2}-[0-9]{3}-[0-9]{4}" title="North American format: XXX-XXX-XXXX"></p>
+    </div>
 <input id="sub" type="submit" value="Submit Data" onclick="ajax_post();"> <br><br>
 </form>
 
-            <div id="status"></div>
+</div><!-- cols -->
+</div><!-- row -->
+
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
 <div id="listing">
-   <!--         <?php
-            // Use returned data
-           // while($subject = mysqli_fetch_assoc($result)) {
-                // output data from each row
-        ?>
-    -->
+
     <div class="table-responsive">
     <table id="tablelist" class="table table-striped table-hover tablesorter">
         <thead>
@@ -132,9 +141,41 @@ echo "<tr>";
     </div><!-- Boot table -->
 </div><!-- listing -->
 
+</div><!-- cols -->
+</div><!-- row -->
+
 </div> <!-- Boot page container -->
 
-<script src="js/bootstrap.min.js"></script>
+<footer class="colophon">
 
+<div class="container-fluid">
+        <div class="row">
+         
+<div class= "col-sm-4 col-sm-push-4  col-sm-offset-2 col-md-push-4 col-md-4 col-md-offset-2 col-lg-push-4 col-lg-4 col-lg-offset-2 col-xs-offset-1 col-xs-10">
+<small><p>Check it all out on <a href="https://github.com/kdubbels/phone-book">GitHub</a>. Then check out some other <a href="http://resume.kristoferdubbels.com">sweet stuff about me</a>. This was a real challenge for me; like me, this app is not yet at 100% but is slowly assuming its ultimate form.</p></small>
+</div>
+  
+<div class= "col-sm-4 col-sm-pull-4  col-md-pull-4  col-md-4 col-lg-pull-4 col-lg-4 col-xs-12">
+<p class="text-center"><span class="kdfooter">KD</span></p>
+<p class="text-center">Proudly built in Frederick, MD.</p>
+<small><p class="text-center">Kristofer Dubbels, 2015.</p></small>
+</div>
+</div>
+
+</footer>
+<div class="stripes"></div>
+
+
+<script src="js/bootstrap.min.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-54785615-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </body>
 </html>
