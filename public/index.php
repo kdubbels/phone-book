@@ -26,7 +26,7 @@ function ajax_post(){
     // Create our XMLHttpRequest object
     var hr = new XMLHttpRequest();
     // Create some variables we need to send to our PHP file
-    var url = "my_parse_file.php";
+    var url = "userinfo.php";
     var fn = document.getElementById("first_name").value;
     var ln = document.getElementById("last_name").value;
     var ph = document.getElementById("phone").value;
@@ -54,9 +54,9 @@ $(document).ready(function()
 ); 
 </script>
 
-<!--
+
 <script type="text/javascript" src="json_script.js"></script>
--->
+
 
 
 <script src="//use.typekit.net/opt0waa.js"></script>
@@ -74,12 +74,12 @@ body{
 
 
 
-<div id="update">
+<form id="myForm">
 <p>First Name: <input id="first_name" name="first_name" type="text" required /></p>
 <p>Last Name: <input id="last_name" name="last_name" type="text" required /></p>
-<p>Phone Number: <input id="phone" name="phone" type="text"></p>
-<input name="myBtn" type="submit" value="Submit Data" onclick="ajax_post();"> <br><br>
-</div>
+<p>Phone Number: <input id="phone" name="phone" type="text" required></p>
+<input id="sub" type="submit" value="Submit Data" onclick="ajax_post();"> <br><br>
+</form>
 
             <div id="status"></div>
 
@@ -122,12 +122,11 @@ echo "<tr>";
         }
             ?>
             <tr>
-                <td>Azert</td>
-                <td>Q</td>
+                <td>Queen</td>
+                <td>Oliver</td>
                 <td>777-888-9999</td>
                 <td style='text-align:center;'><div class='deleteBtn customBtn'><button class='btn btn-default' type='submit'>Delete</button></div></td>
             </tr>
-
         </tbody>
     </table>
     </div><!-- Boot table -->

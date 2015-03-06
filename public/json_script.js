@@ -11,9 +11,9 @@ function done() {
  
 function updates() {
 	 $.getJSON("json_fetch.php", function(data) {
-       $("tbody").empty();
+       $("#table").empty();
 	   $.each(data.result, function(){
-	    $("tbody").append("<tr><td>"+this['first_name']+"</td><td>"+this['last_name']+"</td><td>Phone: "+this['phone']+"</td><td><div class='deleteBtn customBtn'><a href='delete.php?del=$subject[id]'><button class='btn btn-default' type='submit'>Delete</button></a></div></td></tr>");
+	    $("#table").append("<tr><td>"+this['first_name']+"</td><td>"+this['last_name']+"</td><td>Phone: "+this['phone']+"</td><td><div class='deleteBtn customBtn'><a href='delete.php?del=$subject[id]'><button class='btn btn-default' type='submit'>Delete</button></a></div></td></tr>");
 	   });
  });
 }
