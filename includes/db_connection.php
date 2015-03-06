@@ -1,7 +1,7 @@
 <?php
   define("DB_SERVER", "127.0.0.1");
-  define("DB_USER", "xx");
-  define("DB_PASS", "xx");
+  define("DB_USER", "x");
+  define("DB_PASS", "y");
   define("DB_NAME", "phone_book");
 
   // 1. Create a database connection
