@@ -17,7 +17,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Phone Book</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/footer.css" rel="stylesheet">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -73,7 +73,7 @@ body{
 
     <div class="container">
 
-    <h1>My Sweet Phone Book App</h1>
+    <h1 class="text-center">My Sweet Phone Book App</h1>
 
 <div class="row">
 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
@@ -96,6 +96,8 @@ body{
 
 <div class="row">
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+<p>Colums can be alphabetized ascending or descending by clicking on their headers.</p>
+
 
 <div id="listing">
 
@@ -111,6 +113,8 @@ body{
             </th>
             <th>Phone Number
             </th>
+            <th>Remove
+            </th>
         </tr>
         </thead>
         <tbody>
@@ -121,7 +125,7 @@ echo "<tr>";
                 echo "<td>" , $subject["last_name"] , "</td>";
                 echo "<td>" , $subject["first_name"] , "</td>";
                 echo "<td>" , $subject["phone"] , "</td>";
-                echo "<td style='text-align:center;'>";
+                echo "<td>";
   
 
                     //delete button
