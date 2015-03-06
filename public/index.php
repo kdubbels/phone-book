@@ -53,6 +53,23 @@ $(document).ready(function()
     } 
 ); 
 </script>
+<script>
+// $(document).on('click','.deleteBtn',function(){
+// var element = $(this);
+//         var del_id = element.attr("id");
+//         var info = 'id=' + del_id;
+//         if(confirm("Are you sure you want to delete this Record?")){
+//             $.ajax({
+//                 type: "GET",
+//                 url: "delete.php",
+//                 data: info,
+//                 success: function(){  } 
+//             });
+//         }
+//         return false;
+//         });
+
+</script>
 </head>
 <body>
 
@@ -68,8 +85,7 @@ $(document).ready(function()
 <input name="myBtn" type="submit" value="Submit Data" onclick="ajax_post();"> <br><br>
 </div>
 
-<div id="status"></div>
-
+            <div id="status"></div>
 
 <div id="listing">
    <!--         <?php
@@ -96,6 +112,7 @@ $(document).ready(function()
             <?php
         while($subject = mysqli_fetch_assoc($result)) {
 echo "<tr>";
+
                 echo "<td>" , $subject["last_name"] , "</td>";
                 echo "<td>" , $subject["first_name"] , "</td>";
                 echo "<td>" , $subject["phone"] , "</td>";
@@ -105,16 +122,22 @@ echo "<tr>";
                     //echo "<div class='editBtn customBtn'><button class='btn btn-default' type='submit'>Edit</button></div>";
   
                     //delete button
-                    echo "<div class='deleteBtn customBtn'><button class='btn btn-default' type='submit'>Delete</button></div>";
+                    echo "<div class='deleteBtn customBtn'><button class='btn btn-default' type='submit'><a href='delete.php?del=$subject[id]'>Delete</a></button></div>";
                 echo "</td>";
             echo "</tr>";
         }
             ?>
+            <tr>
+                <td>Azert</td>
+                <td>Q</td>
+                <td>777-888-9999</td>
+                <td style='text-align:center;'><div class='deleteBtn customBtn'><button class='btn btn-default' type='submit'>Delete</button></div></td>
+            </tr>
+
         </tbody>
     </table>
     </div><!-- Boot table -->
 </div><!-- listing -->
-
 
 </div> <!-- Boot page container -->
 
