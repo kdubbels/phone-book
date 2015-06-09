@@ -1,8 +1,8 @@
 
 
 -- $servername = "localhost";
--- $username = "kristofer";
--- $password = "revolver";
+-- $username = "";
+-- $password = "";
 -- $dbname = "phone_book";
 
 --
